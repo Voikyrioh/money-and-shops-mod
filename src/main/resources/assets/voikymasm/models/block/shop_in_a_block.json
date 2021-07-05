@@ -1,0 +1,9 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "side": "voikymasm:block/shop_in_a_block_side",
+    "front": "voikymasm:block/shop_in_a_block_front",
+    "top": "voikymasm:block/shop_in_a_block_top",
+    "bottom": "voikymasm:block/shop_in_a_block_bottom"
+  }
+}
