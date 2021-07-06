@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "voikymasm:block/voltium_coin"},
+    "facing=east": { "model": "voikymasm:block/voltium_coin", "y": 90 },
+    "facing=south": { "model": "voikymasm:block/voltium_coin", "y": 180 },
+    "facing=west": { "model": "voikymasm:block/voltium_coin", "y": 270 }
+  }
+}

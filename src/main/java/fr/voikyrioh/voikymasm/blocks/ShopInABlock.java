@@ -1,4 +1,4 @@
-package fr.voikyrioh.voikymasm;
+package fr.voikyrioh.voikymasm.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
