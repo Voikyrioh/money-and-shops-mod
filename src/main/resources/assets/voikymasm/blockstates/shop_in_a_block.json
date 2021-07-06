@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "voikymasm:block/shop_in_a_block" }
+    "facing=north": { "model": "voikymasm:block/shop_in_a_block"},
+    "facing=east": { "model": "voikymasm:block/shop_in_a_block", "y": 90 },
+    "facing=south": { "model": "voikymasm:block/shop_in_a_block", "y": 180 },
+    "facing=west": { "model": "voikymasm:block/shop_in_a_block", "y": 270 }
   }
 }

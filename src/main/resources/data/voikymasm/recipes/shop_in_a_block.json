@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "IOI",
+    "###"
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:carpets"
+    },
+    "I": {
+      "tag": "minecraft:fences"
+    },
+    "O": {
+      "item": "minecraft:villager_spawn_egg"
+    },
+    "#": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "voikymasm:shop_in_a_block"
+  }
+}
