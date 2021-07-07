@@ -1,0 +1,42 @@
+{
+  "block.coin_pose": {
+    "category": "block",
+    "subtitle": "block.coin_pose.sub",
+    "sounds": [
+      {
+        "name": "voikymasm:block/coin/coin_pose",
+        "stream": true
+      }
+    ]
+  },
+  "block.coin_walk": {
+    "category": "block",
+    "subtitle": "block.coin_walk.sub",
+    "sounds": [
+      {
+        "name": "voikymasm:block/coin/coin_walk",
+        "stream": true
+      }
+    ]
+  },
+  "block.coin_use": {
+    "category": "block",
+    "subtitle": "block.coin_use.sub",
+    "sounds": [
+      {
+        "name": "voikymasm:block/coin/coin_use",
+        "stream": true
+      }
+    ]
+  },
+  "block.coin_destroy": {
+    "category": "block",
+    "subtitle": "block.coin_destroy.sub",
+    "sounds": [
+      {
+        "name": "voikymasm:block/coin/coin_destroy",
+        "stream": true
+      }
+    ]
+  }
+}

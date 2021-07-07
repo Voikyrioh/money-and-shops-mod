@@ -1,6 +1,6 @@
 {
-  "parent": "voikymasm:item/voltium_coin",
+  "parent": "item/generated",
   "textures": {
-    "": "voikymasm:item/voltium_coin"
+    "layer0": "voikymasm:item/voltium_coin"
   }
 }

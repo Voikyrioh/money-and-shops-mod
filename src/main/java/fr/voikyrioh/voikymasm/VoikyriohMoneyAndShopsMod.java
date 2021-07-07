@@ -7,6 +7,7 @@ public class VoikyriohMoneyAndShopsMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// Init mod Registry
+		ModRegistry.addSoundsToRegistry();
 		ModRegistry.addBlocksToRegistry();
 		ModRegistry.addBlockItemsToRegistry();
 		ModRegistry.addItemsToRegistry();

@@ -10,10 +10,18 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModRegistry {
+
+    //#region SOUNDS INIT
+    public static final SoundEvent COIN_POSE = new SoundEvent(new Identifier("voikymasm", "block.coin_pose"));
+    public static final SoundEvent COIN_WALK = new SoundEvent(new Identifier("voikymasm", "block.coin_walk"));
+    public static final SoundEvent COIN_USE = new SoundEvent(new Identifier("voikymasm", "block.coin_use"));
+    public static final SoundEvent COIN_DESTROY = new SoundEvent(new Identifier("voikymasm", "block.coin_destroy"));
+    //#endregion
 
     //#region BLOCKS INIT
     public static final Block SHOP_IN_A_BLOCK = new ShopInABlock(
@@ -27,7 +35,7 @@ public class ModRegistry {
     public static final Block VOLTIUM_COIN = new VoltiumCoin(
             FabricBlockSettings
                     .of(Material.METAL)
-                    .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
+                    .sounds(new BlockSoundGroup(1.0f, 1.0f, COIN_DESTROY, COIN_WALK, COIN_USE, COIN_POSE, COIN_DESTROY))
                     .breakInstantly()
                     .luminance(1)
     );
@@ -41,6 +49,14 @@ public class ModRegistry {
     //#region ITEMS INIT
 
     //#endregion
+
+    // Register all MASM Items
+    public static void addSoundsToRegistry() {
+        Registry.register(Registry.SOUND_EVENT, new Identifier("voikymasm", "block.coin_pose"), COIN_POSE);
+        Registry.register(Registry.SOUND_EVENT, new Identifier("voikymasm", "block.coin_walk"), COIN_WALK);
+        Registry.register(Registry.SOUND_EVENT, new Identifier("voikymasm", "block.coin_use"), COIN_USE);
+        Registry.register(Registry.SOUND_EVENT, new Identifier("voikymasm", "block.coin_destroy"), COIN_DESTROY);
+    }
 
     // Register all MASM Blocks
     public static void addBlocksToRegistry() {
