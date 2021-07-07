@@ -15,7 +15,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "2"
+                    "coin_stack": "2"
                   }
                 }
               ],
@@ -29,7 +29,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "3"
+                    "coin_stack": "3"
                   }
                 }
               ],
@@ -43,7 +43,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "4"
+                    "coin_stack": "4"
                   }
                 }
               ],
@@ -57,7 +57,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "5"
+                    "coin_stack": "5"
                   }
                 }
               ],
@@ -71,7 +71,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "6"
+                    "coin_stack": "6"
                   }
                 }
               ],
@@ -85,7 +85,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "7"
+                    "coin_stack": "7"
                   }
                 }
               ],
@@ -99,11 +99,123 @@
                   "condition": "minecraft:block_state_property",
                   "block": "voikymasm:voltium_coin",
                   "properties": {
-                    "layers": "8"
+                    "coin_stack": "8"
                   }
                 }
               ],
               "count": 8.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "9"
+                  }
+                }
+              ],
+              "count": 9.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "10"
+                  }
+                }
+              ],
+              "count": 10.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "11"
+                  }
+                }
+              ],
+              "count": 11.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "12"
+                  }
+                }
+              ],
+              "count": 12.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "13"
+                  }
+                }
+              ],
+              "count": 13.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "14"
+                  }
+                }
+              ],
+              "count": 14.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "15"
+                  }
+                }
+              ],
+              "count": 15.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "voikymasm:voltium_coin",
+                  "properties": {
+                    "coin_stack": "16"
+                  }
+                }
+              ],
+              "count": 16.0,
               "add": false
             },
             {

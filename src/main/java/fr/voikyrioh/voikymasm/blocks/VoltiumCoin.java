@@ -7,7 +7,6 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -28,7 +27,7 @@ import net.minecraft.world.WorldView;
 public class VoltiumCoin extends Block implements Waterloggable {
     public static final DirectionProperty FACING;
     public static final BooleanProperty WATERLOGGED;
-    public static final IntProperty LAYERS;
+    public static final IntProperty COIN_STACK;
 
     public VoltiumCoin(Settings settings) {
         super(settings);
@@ -38,7 +37,7 @@ public class VoltiumCoin extends Block implements Waterloggable {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
         builder.add(WATERLOGGED);
-        builder.add(LAYERS);
+        builder.add(COIN_STACK);
         super.appendProperties(builder);
     }
 
@@ -61,7 +60,7 @@ public class VoltiumCoin extends Block implements Waterloggable {
 
     @Override
     public boolean canReplace(BlockState state, ItemPlacementContext context) {
-        return !context.shouldCancelInteraction() && context.getStack().getItem() == this.asItem() && (Integer)state.get(LAYERS) < 8 ? true : super.canReplace(state, context);
+        return !context.shouldCancelInteraction() && context.getStack().getItem() == this.asItem() && (Integer)state.get(COIN_STACK) < 16 ? true : super.canReplace(state, context);
     }
 
     @Override
@@ -73,7 +72,7 @@ public class VoltiumCoin extends Block implements Waterloggable {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos());
         if (blockState.isOf(this)) {
-            return (BlockState)blockState.cycle(LAYERS);
+            return (BlockState)blockState.cycle(COIN_STACK);
         } else {
             FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
             BlockState blockPoseState = this.getDefaultState().with(FACING,ctx.getPlayerFacing().getOpposite());
@@ -86,7 +85,7 @@ public class VoltiumCoin extends Block implements Waterloggable {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.cuboid(0.1f, 0f, 0.1f, 0.9f, (1f/16f) * ((float) state.get(LAYERS)), 0.9f);
+        return VoxelShapes.cuboid(0.1f, 0f, 0.1f, 0.9f, (1f/16f) * ((float) state.get(COIN_STACK)), 0.9f);
     }
 
     @Override
@@ -97,6 +96,6 @@ public class VoltiumCoin extends Block implements Waterloggable {
     static {
         FACING = HorizontalFacingBlock.FACING;
         WATERLOGGED = Properties.WATERLOGGED;
-        LAYERS = Properties.LAYERS;
+        COIN_STACK = IntProperty.of("coin_stack", 1, 16);
     }
 }
